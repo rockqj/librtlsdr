@@ -913,6 +913,7 @@ static void *controller_thread_fn(void *arg)
 			continue;}
 		/* hacky hopping */
 		s->freq_now = (s->freq_now + 1) % s->freq_len;
+		fprintf(stderr, "Current Frequncey: %d Hz.\n", s->freqs[s->freq_now]);
 		optimal_settings(s->freqs[s->freq_now], demod.rate_in);
 		rtlsdr_set_center_freq(dongle.dev, dongle.freq);
 		dongle.mute = BUFFER_DUMP;
