@@ -101,11 +101,11 @@ target_link_libraries(rtl_tcp rtlsdr_shared convenience_static
     ${LIBUSB_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}
 )
-target_link_libraries(rtl_test rtlsdr_shared convenience_static
+target_link_libraries(rtl_test rtlsdr_static convenience_static
     ${LIBUSB_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}
 )
-target_link_libraries(rtl_fm rtlsdr_shared convenience_static
+target_link_libraries(rtl_fm rtlsdr_static convenience_static
     ${LIBUSB_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}
 )
